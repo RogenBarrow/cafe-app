@@ -1,5 +1,12 @@
 <script>
-	import '../app.css';
+	import { AppShell } from '@skeletonlabs/skeleton';
+	import AppBar from '@skeletonlabs/skeleton';
 </script>
 
-<slot></slot>
+<AppShell>
+	<svelte:fragment slot="header">
+		<AppBar>Skeleton</AppBar>
+	</svelte:fragment>
+	<slot />
+	<svelte:fragment slot="footer">Footer</svelte:fragment>
+</AppShell>
